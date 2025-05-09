@@ -12,7 +12,7 @@ const ImportantTask = () => {
     useEffect(() => {
       const fetchTasks = async () => {
         try {
-          const response = await axios.get("http://localhost:1000/api/v2/get-imp-tasks", { headers });
+          const response = await axios.get("https://ganak-xb2a.onrender.com/api/v2/get-imp-tasks", { headers });
           
           setData(response.data.data);
         } catch (error) {

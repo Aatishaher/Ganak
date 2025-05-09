@@ -26,7 +26,7 @@ const Login = () => {
       if (Data.username === "" || Data.password === "") {
         alert("All fields are required");
       } else {
-        const response = await axios.post("http://localhost:1000/api/v1/log-in", Data);
+        const response = await axios.post("https://ganak-xb2a.onrender.com/api/v1/log-in", Data);
         console.log(response);
 
         // ✅ Dispatch login action to update isLoggedIn = true

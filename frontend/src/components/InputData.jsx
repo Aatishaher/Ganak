@@ -30,8 +30,8 @@ const InputData = ({ InputDiv, setInputDiv, setTasks, updatedData, setupdatedDat
     }
 
     try {
-      await axios.post("http://localhost:1000/api/v2/create-task", Data, { headers });
-      const res = await axios.get("http://localhost:1000/api/v2/get-all-tasks", { headers });
+      await axios.post("https://ganak-xb2a.onrender.com/api/v2/create-task", Data, { headers });
+      const res = await axios.get("https://ganak-xb2a.onrender.com/api/v2/get-all-tasks", { headers });
       const sortedTasks = res.data.data.tasks.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       setTasks(sortedTasks);
 
@@ -50,8 +50,8 @@ const InputData = ({ InputDiv, setInputDiv, setTasks, updatedData, setupdatedDat
     }
 
     try {
-      await axios.put(`http://localhost:1000/api/v2/update-task/${updatedData.id}`, Data, { headers });
-      const res = await axios.get("http://localhost:1000/api/v2/get-all-tasks", { headers }); // Change put to get for fetching tasks
+      await axios.put(`https://ganak-xb2a.onrender.com/api/v2/update-task/${updatedData.id}`, Data, { headers });
+      const res = await axios.get("https://ganak-xb2a.onrender.com/api/v2/get-all-tasks", { headers }); // Change put to get for fetching tasks
       const sortedTasks = res.data.data.tasks.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       setTasks(sortedTasks);
 

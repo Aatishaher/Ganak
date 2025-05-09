@@ -16,7 +16,7 @@ const AllTask = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get("http://localhost:1000/api/v2/get-all-tasks", { headers });
+        const response = await axios.get("https://ganak-xb2a.onrender.com/api/v2/get-all-tasks", { headers });
         const sortedTasks = response.data.data.tasks.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         setTasks(sortedTasks);
       } catch (error) {

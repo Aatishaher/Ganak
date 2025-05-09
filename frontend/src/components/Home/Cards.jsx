@@ -29,7 +29,7 @@ const Cards = ({ home, setInputDiv, data,setupdatedData }) => {
     // Call API in background
     try {
       await axios.put(
-        `http://localhost:1000/api/v2/update-complete-task/${id}`,
+        `https://ganak-xb2a.onrender.com/api/v2/update-complete-task/${id}`,
         {},
         { headers }
       );
@@ -50,7 +50,7 @@ const Cards = ({ home, setInputDiv, data,setupdatedData }) => {
     // Call API in background
     try {
       await axios.put(
-        `http://localhost:1000/api/v2/update-imp-task/${id}`,
+        `https://ganak-xb2a.onrender.com/api/v2/update-imp-task/${id}`,
         {},
         { headers }
       );
@@ -74,7 +74,7 @@ const Cards = ({ home, setInputDiv, data,setupdatedData }) => {
     setTasks(updatedTasks);
   
     try {
-      await axios.delete(`http://localhost:1000/api/v2/delete-task/${id}`, {
+      await axios.delete(`https://ganak-xb2a.onrender.com/api/v2/delete-task/${id}`, {
         headers, 
       });
     } catch (error) {
